@@ -61,10 +61,12 @@ table {
 @main-font: "helvetica Neue";
 @h1-color: #373838;
 @content-color: #CACCCD;
-@p-font-size: 1.6rem;
+@p-font-size: 1.7rem;
 @a-font-size: 2rem;
 @h1-font-size: 2.6rem;
+@h2-font-size: 2rem;
 @h3-font-size: 2rem;
+
 
 
 
@@ -92,26 +94,62 @@ header {
     flex-direction: row;
     justify-content: center;
 	margin: 60px auto;
+
 	a {
 		text-decoration: none;
 		color: @nav-color;
 		font-family: @main-font;
 		font-size: @a-font-size;
-		padding: 0 40px;
-	}
+		padding: 20px 30px;
+		border-radius: 10px;
+		margin: 20px;
+		
+		
+		@media(max-width: 800px){
+			margin: 0;
+		}
+
+		@media(max-width: 500px){
+			display: flex;
+			justify-content: center; 
+			align-items: center;
+			padding: 10px 20px;
+			border-top: 1px solid @content-color;
+			border-radius: 0px;
+			margin: 20px 20px 0 20px;
+		}
+
+
 	nav {
+		@media(max-width: 800px){
+			display: flex;
+			flex-direction: row;
+			}
+
 		@media(max-width: 500px){
 			display: flex;
 			flex-direction: column;
+			}
+		}	
 	}
 
+	a:hover {
+		background: @content-color;
+		color: white;
+	}
 
 }
+
+
+
+h2 {
+	font-size: @h2-font-size;
+	text-align: center;
+	padding-bottom: 30px;
 }
 
 h3 {
- font-size: @h3-font-size;
- text-align: center;
+ 	font-size: @h3-font-size;
 }
 
 
@@ -157,9 +195,13 @@ h1 {
 }
 
 li {
-	p();
+	font-size: @p-font-size;
+	list-style-type: square;
 }
 
+span {
+	font-weight: bold;
+}
 
 
 
