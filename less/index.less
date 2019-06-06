@@ -53,7 +53,113 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+
+// VARIABLES
+
+@body-color: #D6F5FB;
+@nav-color: #818282;
+@main-font: "helvetica Neue";
+@h1-color: #373838;
+@content-color: #CACCCD;
+@p-font-size: 1.6rem;
+@a-font-size: 2rem;
+@h1-font-size: 2.6rem;
+@h3-font-size: 2rem;
+
+
+
+
+// CODES
+
+
+html {
+	font-size: 62.5%;
 }
+
+
+html, body {
+	height: 100%;
+	background: @body-color;
+}
+
+.container {
+	max-width: 885px;
+	margin: 0 auto;
+}
+
+header {
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+	margin: 60px auto;
+	a {
+		text-decoration: none;
+		color: @nav-color;
+		font-family: @main-font;
+		font-size: @a-font-size;
+		padding: 0 40px;
+	}
+	nav {
+		@media(max-width: 500px){
+			display: flex;
+			flex-direction: column;
+	}
+
+
+}
+}
+
+h3 {
+ font-size: @h3-font-size;
+ text-align: center;
+}
+
+
+
+section {
+	margin: 40px;
+	padding: 20px;
+	border: 1px solid black;
+	background: @content-color;
+
+	p {
+		font-size: @p-font-size;
+	}
+}
+
+.section-one {
+	div:last-child {
+		margin-top: 10px;
+	}
+}
+
+
+img {
+	justify-content: center;
+	width: 20%;
+	height: auto;
+	border-radius: 50%;
+	margin: auto;
+	display: block;
+	padding: 20px 0;
+
+}
+
+h1 {
+	font-size: @h1-font-size;
+	color: @h1-color;
+	text-align: center;
+	padding: 30px;
+}
+
+.content {
+	margin: 20px
+}
+
+li {
+	p();
+}
+
+
+
 
